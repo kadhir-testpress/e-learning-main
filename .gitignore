@@ -1,0 +1,22 @@
+# Ignore Python cache files
+__pycache__/
+
+# Exclude all pycache except for migrations
+**/__pycache__/*
+!**/migrations/__pycache__/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore database files
+*.sqlite3
+
+# Ignore development settings file
+settings_local.py
+
+# Ignore virtual environment
+venv/
+
+.env
