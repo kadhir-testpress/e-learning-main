@@ -9,6 +9,7 @@ from django.views.generic.base import TemplateResponseMixin, View
 from .forms import ModuleFormSet
 from django.forms.models import modelform_factory
 from django.apps import apps
+from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
 
 # Create your views here.
 class OwnerMixin(object):
@@ -117,10 +118,8 @@ class ModuleContentListView(TemplateResponseMixin, View):
 
     def get(self, request, module_id):
         module = get_object_or_404(Module, id=module_id, course__owner=request.user)
-<<<<<<< HEAD
         return self.render_to_response({'module': module})
-=======
-        return self.render_to_response({'module': module})
+
     
 class ModuleOrderView(CsrfExemptMixin, JsonRequestResponseMixin, View):
     def post(self, request):
@@ -155,4 +154,3 @@ from django.views.generic.detail import DetailView
 class CourseDetailView(DetailView):
     model = Course
     template_name = 'courses/course/detail.html'
->>>>>>> d43ad7c (Implement CourseListView and CourseDetailView for displaying available courses to public)
