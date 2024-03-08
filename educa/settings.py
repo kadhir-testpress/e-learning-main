@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'students.apps.StudentsConfig',
     'embed_video',
     'rest_framework',
+    'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -135,4 +137,16 @@ CACHES = {
  'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
  'LOCATION': '127.0.0.1:11211',
  }
+}
+
+#Routing
+ASGI_APPLICATION = 'educa.routing.application'
+
+CHANNEL_LAYERS = {
+ 'default': {
+ 'BACKEND': 'channels_redis.core.RedisChannelLayer',
+ 'CONFIG': {
+ 'hosts': [('127.0.0.1', 6379)],
+ },
+ },
 }
