@@ -23,11 +23,7 @@ urlpatterns = [
     path('module/<int:module_id>/',
          views.ModuleContentListView.as_view(),
          name='module_content_list'),
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 017e848 (jQuery UI Integration for Reorder Modules and Contents (#10))
     path('module/order/',
          views.ModuleOrderView.as_view(),
          name='module_order'),
@@ -35,8 +31,7 @@ urlpatterns = [
     path('content/order/',
          views.ContentOrderView.as_view(),
          name='content_order'),
-
-<<<<<<< HEAD
+  
     path('subject/<slug:subject>/',
          views.CourseListView.as_view(),
          name='course_list_subject'),
@@ -44,8 +39,8 @@ urlpatterns = [
     path('<slug:slug>/',
          views.CourseDetailView.as_view(),
          name='course_detail'),
+
 ]
-=======
-    
-]
->>>>>>> 017e848 (jQuery UI Integration for Reorder Modules and Contents (#10))
+
+
+
