@@ -36,6 +36,7 @@ class CourseCreateView(OwnerCourseEditMixin, CreateView):
 
 class CourseUpdateView(OwnerCourseMixin, UpdateView):
     permission_required = 'courses.change_course' 
+    template_name = 'courses/manage/course/form.html'
     
 class CourseDeleteView(OwnerCourseMixin, DeleteView):
     template_name = 'courses/manage/course/delete.html'
