@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'ordered_model',
     'students.apps.StudentsConfig',
     'embed_video',
-    'memcache_status',
     'rest_framework',
 ]
 
